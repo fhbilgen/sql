@@ -36,7 +36,7 @@ GO
 USE [master];
 GO
 
-DECLARE @BackupFileRestore NVARCHAR(4000) = N'D:\IncomingBackups\testdb_full.bak';
+DECLARE @BackupFileRestore NVARCHAR(4000) = N'C:\IncomingBackups\testdb_full.bak';
 
 /*
     First inspect logical file names in the backup.
@@ -46,7 +46,7 @@ RESTORE FILELISTONLY
 FROM DISK = @BackupFileRestore;
 GO
 
-DECLARE @BackupFileRestore2 NVARCHAR(4000) = N'D:\IncomingBackups\testdb_full.bak';
+DECLARE @BackupFileRestore2 NVARCHAR(4000) = N'C:\IncomingBackups\testdb_full.bak';
 DECLARE @DataLogicalName SYSNAME = N'testdb';
 DECLARE @LogLogicalName  SYSNAME = N'testdb_log';
 
